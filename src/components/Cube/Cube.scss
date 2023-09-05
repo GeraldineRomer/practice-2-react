@@ -1,0 +1,206 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .cube {
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        animation: spin 8s infinite linear;
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.8;
+        }
+        .front {
+            transform: translateZ(50px);
+            background: linear-gradient(45deg, rgb(255, 62, 62), rgb(5, 216, 5));
+        }
+        .back {
+            transform: translateZ(-50px);
+            background: linear-gradient(45deg, rgb(238, 74, 74), rgb(11, 97, 11));
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(50px);
+            background: linear-gradient(45deg, rgb(255, 123, 0), rgb(66, 212, 66));
+        }
+        .bottom {
+            transform: rotateX(90deg) translateZ(-50px);
+            background: linear-gradient(45deg, rgba(255, 187, 1, 0.89), rgb(53, 119, 53));
+        }
+        .left {
+            transform: rotateY(90deg) translateZ(50px);
+            background: linear-gradient(45deg, rgb(255, 230, 0), rgb(63, 228, 63));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(-50px);
+            background: linear-gradient(45deg, rgb(235, 192, 3), rgb(18, 78, 18));
+        }
+    }
+}
+
+.options {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 85%;
+    z-index: 1;
+    .cube1{
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform: rotateX(347deg) rotateY(341deg);
+        /* animation: spin 8s infinite linear; */
+        position: fixed;
+        top: 100px;
+        right: 100px;
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0.8;
+        }
+
+        .front {
+            transform: translateZ(25px) ;
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+        .back {
+            transform: translateZ(-25px);
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+        .bottom {
+            transform: rotateX(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+        .left {
+            transform: rotateY(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(255, 44, 44), rgb(120, 2, 255));
+        }
+
+        .instagram {
+            fill: rgb(253, 79, 79);
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .cube2{
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform: rotateX(347deg) rotateY(341deg);
+        /* animation: spin 8s infinite linear; */
+        position: fixed;
+        top: 200px;
+        right: 100px;
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0.8;
+        }
+        .front {
+            transform: translateZ(25px) ;
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+        .back {
+            transform: translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+        .bottom {
+            transform: rotateX(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+        .left {
+            transform: rotateY(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
+        }
+
+        .linkendin {
+            fill: rgb(181, 181, 255);
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .cube3{
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform: rotateX(347deg) rotateY(341deg);
+        /* animation: spin 8s infinite linear; */
+        position: fixed;
+        top: 300px;
+        right: 100px;
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0.8;
+        }
+        .front {
+            transform: translateZ(25px) ;
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+        .back {
+            transform: translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+        .bottom {
+            transform: rotateX(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+        .left {
+            transform: rotateY(90deg) translateZ(25px);
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(-25px);
+            background: linear-gradient(45deg, rgb(107, 196, 255), rgb(2, 74, 107));
+        }
+
+        .facebook {
+            fill: rgb(0, 63, 136);
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes spin{
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
