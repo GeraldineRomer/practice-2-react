@@ -19,27 +19,27 @@
         }
         .front {
             transform: translateZ(50px);
-            background: linear-gradient(45deg, rgb(255, 62, 62), rgb(5, 216, 5));
+            background: linear-gradient(45deg, rgb(148, 129, 255), rgb(68, 53, 156));
         }
         .back {
             transform: translateZ(-50px);
-            background: linear-gradient(45deg, rgb(238, 74, 74), rgb(11, 97, 11));
+            background: linear-gradient(45deg, rgb(132, 116, 224), rgb(91, 71, 204));
         }
         .top {
             transform: rotateX(90deg) translateZ(50px);
-            background: linear-gradient(45deg, rgb(255, 123, 0), rgb(66, 212, 66));
+            background: linear-gradient(45deg, rgb(72, 56, 160), rgb(62, 40, 189));
         }
         .bottom {
             transform: rotateX(90deg) translateZ(-50px);
-            background: linear-gradient(45deg, rgba(255, 187, 1, 0.89), rgb(53, 119, 53));
+            background: linear-gradient(45deg, rgb(154, 143, 214), rgb(93, 74, 201));
         }
         .left {
             transform: rotateY(90deg) translateZ(50px);
-            background: linear-gradient(45deg, rgb(255, 230, 0), rgb(63, 228, 63));
+            background: linear-gradient(45deg, rgb(93, 73, 206), rgb(95, 74, 216));
         }
         .right {
             transform: rotateY(90deg) translateZ(-50px);
-            background: linear-gradient(45deg, rgb(235, 192, 3), rgb(18, 78, 18));
+            background: linear-gradient(45deg, rgb(104, 87, 197), rgb(85, 66, 190));
         }
     }
 }

@@ -11,15 +11,15 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #eeeeee;
+        background-color: #dbcdfd;
         padding: 10px 20px;
         ul{
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
             align-items: center;
-            margin-right: auto;
-            justify-content: center;
+            justify-content: space-between;
             li {
                 margin-right: 20px;
                 a{
@@ -31,7 +31,7 @@ body{
                     transition: background-color 0.3s;
                     &:hover{
                         color: rgb(243, 243, 255);
-                        background-color: rgba(137, 222, 255, 0.986);
+                        background-color: rgba(140, 217, 248, 0.986);
                         border-radius: 20px;
                     }
                     &:active{
@@ -92,7 +92,7 @@ body{
         transform: translateX(-100%);
         left: 0px;
         width: 100%;
-        background-color: #9c9c9c;
+        background-color: rgba(97, 166, 212, 0.986);
         position: absolute;
         top: 64px;
     }

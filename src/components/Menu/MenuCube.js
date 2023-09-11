@@ -1,10 +1,13 @@
 import React from 'react';
 import './MenuCube.scss';
-import { Link } from 'react-router-dom';
 import UamLogo  from '../../assets/img/logo-removebg-preview.png';
 import  Avatar  from '../../assets/img/avatar.png';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const MenuCube = () => {
+    /* scrollToTop = () => {
+        scroll.scrollToTop();
+    }; */
     const burguer = () => {
         const toggle = document.getElementById('toggle');
         const items = document.getElementById('items');
@@ -21,9 +24,42 @@ export const MenuCube = () => {
                     <span></span>
                 </div>
                 <ul id="items">
-                    <li><Link to="/flex">Flexbox</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/products">Products</Link></li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="Flexbox"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Flexbox
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="Contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="Products"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Products
+                        </Link>
+                    </li>
                 </ul>
                 <div class="avatar-container">
                     <img src={Avatar} alt="Foto de perfil" class="avatar"/>

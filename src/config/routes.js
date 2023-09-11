@@ -1,6 +1,6 @@
-import { Flexbox } from "../components/Flexbox/Flexbox";
-import { Contact } from "../components/Contact/Contact";
-import { Products } from "../components/Products/Products";
+import { Flexbox } from "../pages/Flexbox/Flexbox";
+import { Contact } from "../pages/Contact/Contact";
+import { Products } from "../pages/Products/Products";
 
 const GeneralRoutes = [
     { path: "/flex", component: Flexbox},

@@ -3,7 +3,7 @@ import './Flexbox.scss';
 
 export const Flexbox = () => {
     return (
-        <div>
+        <div class="Flexbox">
             Flexbox
         </div>
     )
