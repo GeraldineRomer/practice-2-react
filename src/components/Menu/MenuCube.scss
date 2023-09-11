@@ -19,6 +19,7 @@ body{
             list-style: none;
             align-items: center;
             margin-right: auto;
+            justify-content: center;
             li {
                 margin-right: 20px;
                 a{
@@ -29,8 +30,9 @@ body{
                     padding: 5px 10px;
                     transition: background-color 0.3s;
                     &:hover{
-                        color: blue;
-                        background-color: rgba(137, 222, 255, 0.192);
+                        color: rgb(243, 243, 255);
+                        background-color: rgba(137, 222, 255, 0.986);
+                        border-radius: 20px;
                     }
                     &:active{
                         color: rgb(204, 75, 75);
