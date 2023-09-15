@@ -1,32 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Slider from "react-slick";
-import "./index.css";
+import "./Slider.scss";
 
-class ReactSlickDemo extends React.Component {
+class SliderComponent extends React.Component {
     render() {
         var settings = {
-        dots: true
+            dots: true
         };
-        return (
-        <div className="container">
+    return (
+        <div className="container" id="container">
             <Slider {...settings}>
-            <div>
+                <div>
                 <img src="http://placekitten.com/g/400/200" />
-            </div>
-            <div>
+                </div>
+                <div>
                 <img src="http://placekitten.com/g/400/200" />
-            </div>
-            <div>
+                </div>
+                <div>
                 <img src="http://placekitten.com/g/400/200" />
-            </div>
-            <div>
+                </div>
+                <div>
                 <img src="http://placekitten.com/g/400/200" />
-            </div>
+                </div>
             </Slider>
         </div>
-        );
+    );
     }
 }
 
-ReactDOM.render(<ReactSlickDemo />, document.getElementById("container"));
+ReactDOM.render(<SliderComponent />, document.getElementById("container"));
+export default SliderComponent;

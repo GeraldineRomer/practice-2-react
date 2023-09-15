@@ -84,7 +84,10 @@
                 border-color: rgba(255, 0, 0, 0.007);
                 &:hover{
                     cursor: pointer;
-                    background-color: rgba(180, 19, 180, 0.938);
+                    background-color: rgba(111, 22, 228, 0.938);
+                    transform: scale(1.1);
+                    
+                    border-radius: 10px;
                 }
             }
             & .contact{
@@ -98,7 +101,9 @@
                 border-color: rgba(255, 0, 0, 0.007);
                 &:hover{
                     cursor: pointer;
-                    background-color: rgba(206, 21, 206, 0.938);
+                    background-color: rgba(111, 22, 228, 0.938);
+                    transform: scale(1.1);
+                    border-radius: 10px;
                 }
             }
             & .products{
@@ -112,7 +117,9 @@
                 border-color: rgba(255, 0, 0, 0.007);
                 &:hover{
                     cursor: pointer;
-                    background-color: rgba(228, 22, 228, 0.938);
+                    background-color: rgba(111, 22, 228, 0.938);
+                    transform: scale(1.1);
+                    border-radius: 10px;
                 }
             }
         }
