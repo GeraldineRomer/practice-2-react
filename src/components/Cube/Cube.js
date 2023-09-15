@@ -23,6 +23,15 @@ export const Cube = () => {
             }
         }
     };
+
+    // Estado para controlar si las secciones deben estar ocultas
+    const [hideSections, setHideSections] = useState(false);
+
+    // Función para cambiar el estado de hideSections
+    const toggleHideSections = () => {
+        setHideSections(!hideSections);
+    };
+
     const products = () => {
         console.log('Di clic en la opción 1');
         window.open('../Products', '_self'); // Abre una nueva ventana o pestaña
@@ -46,11 +55,11 @@ export const Cube = () => {
                 <div class="right"></div>
             </div>
             <div class="options" id="options">
-                <div class="cube2" id="option2" onClick={contact}>
+                <div class="cube2" id="option2" >
                     <div class="front">
-                        <button class="section1">Flexbox</button>
-                        <button class="section2">Contact</button>
-                        <button class="section3">Products</button>
+                        <button class="flexbox" onClick={flexbox}>Flexbox</button>
+                        <button class="contact" onClick={contact}>Contact</button>
+                        <button class="products" onClick={products}>Products</button>
                     </div>
                     <div class="back"></div>
                     <div class="top"></div>

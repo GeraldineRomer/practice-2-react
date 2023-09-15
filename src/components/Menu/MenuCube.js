@@ -27,10 +27,10 @@ export const MenuCube = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="Flexbox"
+                            to="Section1"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={-50}
                             duration={500}
                         >
                             Flexbox
@@ -39,10 +39,10 @@ export const MenuCube = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="Contact"
+                            to="Section2"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={-50}
                             duration={500}
                         >
                             Contact
@@ -51,10 +51,10 @@ export const MenuCube = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="Products"
+                            to="Section3"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={-50}
                             duration={500}
                         >
                             Products

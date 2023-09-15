@@ -1,9 +1,11 @@
 import { Flexbox } from "../pages/Flexbox/Flexbox";
 import { Contact } from "../pages/Contact/Contact";
 import { Products } from "../pages/Products/Products";
+import { Home } from "../pages/Home/Home";
 
 const GeneralRoutes = [
-    { path: "/flex", component: Flexbox},
+    { path: "/", component: Home},
+    { path: "/flexbox", component: Flexbox},
     { path: "/contact", component: Contact},
     { path: "/products", component: Products}
 ]

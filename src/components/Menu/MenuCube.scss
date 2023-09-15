@@ -33,9 +33,10 @@ body{
                         color: rgb(243, 243, 255);
                         background-color: rgba(140, 217, 248, 0.986);
                         border-radius: 20px;
+                        cursor: pointer;
                     }
                     &:active{
-                        color: rgb(204, 75, 75);
+                        color: rgba(59, 89, 255, 0.986);
                         font-weight: 700;
                         &::after{
                             background-color: #bebbbbc9;

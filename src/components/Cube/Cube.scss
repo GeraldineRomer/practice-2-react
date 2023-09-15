@@ -73,7 +73,7 @@
             height: 72px;
             transform: translateZ(36px) ;
             background: linear-gradient(45deg, rgb(107, 110, 255), rgb(6, 2, 255));
-            & .section1{
+            & .flexbox{
                 display: flex;
                 height: 24px;
                 width: 100px;
@@ -87,7 +87,7 @@
                     background-color: rgba(180, 19, 180, 0.938);
                 }
             }
-            & .section2{
+            & .contact{
                 display: flex;
                 height: 24px;
                 width: 100px;
@@ -101,7 +101,7 @@
                     background-color: rgba(206, 21, 206, 0.938);
                 }
             }
-            & .section3{
+            & .products{
                 display: flex;
                 height: 24px;
                 width: 100px;
