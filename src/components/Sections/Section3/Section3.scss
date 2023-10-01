@@ -1,10 +1,12 @@
 .Section3{
-    height: 500px;
+    height: auto;
     width: auto;
     background-color: rgb(5, 160, 231);
     margin: 40px;
     border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     .cards{
         flex-direction: row;
         justify-content: space-between;
@@ -44,15 +46,9 @@
             cursor: pointer;
         }
     }
-    .cards-additionals{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        display:flex ;
-    }
     .card-additional{
         margin: 50px;
-        height: 1031px;
+        height: auto;
         width: 250px;
         background-color: rgb(89, 36, 214);
         border-radius: 5px;
@@ -62,23 +58,18 @@
         flex-direction: column;
         align-items: center;
         .content-card-additional{
-            height: 1010px;
+            height: auto;
             width: 200px;
             background-color: rgba(168, 146, 219, 0.5);
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.83);
-            .img-prin{
-                display: flex;
-                height: 300px;
-                width: 168px;
-                margin: 15px 0px 0px 15px;
-            }
             .img{
                 display: flex;
                 height: 300px;
                 width: 168px;
-                margin: 0px 0px 0px 15px;
+                margin: 15px 0px 0px 15px;
             }
             .title {
                 display: flex;
@@ -87,13 +78,6 @@
                 margin: 16px;
                 font-size: 18px;
                 font-weight: bold;
-            }
-            .descripcion{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 5px;
-                font-size: 15px;
             }
         }
     }

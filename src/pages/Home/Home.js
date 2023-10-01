@@ -13,7 +13,7 @@ export const Home = () => {
         <div class="Home">
             <Cube />
             {/* <MenuCube /> */}
-            <TraslucentMenu/>
+            {/* <TraslucentMenu/> */}
             <Section1/>
             <Section2/>
             <Section3/>

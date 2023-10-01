@@ -13,57 +13,119 @@ import Refrigeracion3 from '../../../assets/img/refrigeracion3.jpg';
 export const Section3 = () => {
     const location = useLocation();
     const shouldHide = location.pathname === '/products';
-    const [cardVisible, setCardVisible] = useState(false);
-    const toggleCard = () => {
-        setCardVisible((prevState) => !prevState);
-    }
-    const [cardVisible2, setCardVisible2] = useState(false);
-    const toggleCard2 = () => {
-        setCardVisible2((prevState) => !prevState);
-    }
+    /* categoría seleccionada */
+    const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+    const categories = [
+        {   
+            id:'1',
+            name: 'Mantenimiento',
+            description: 'Descripcion mantenimiento',
+            img: Mantenimiento
+        },
+        {
+            id:'2',
+            name: 'Refrigeracion',
+            description: 'Descripcion refrigeracion',
+            img: Refrigeracion
+        },
+        {
+            id:'3',
+            name: 'cat3',
+            description: 'info cat 3',
+            img: Mantenimiento1
+        },
+        {
+            id:'4',
+            name: 'cat4',
+            description: 'info cat 4',
+            img: Mantenimiento2
+        },
+        {
+            id:'5',
+            name: 'cat5',
+            description: 'info cat 5',
+            img: Mantenimiento3
+        }
+    ]
+
+    const services = [
+        {
+            id: '1',
+            categoryId: '1',
+            name: 'service1',
+            imgs: [Refrigeracion1,Refrigeracion1]
+        },
+        {
+            id: '2',
+            categoryId: '1',
+            name: 'service2',
+            imgs: [Refrigeracion2,Refrigeracion2]
+        },
+        {
+            id: '3',
+            categoryId: '2',
+            name: 'service3',
+            imgs: [Refrigeracion3,Refrigeracion3]
+        },
+        {
+            id: '4',
+            categoryId: '3',
+            name: 'service4',
+            imgs: [Refrigeracion1,Refrigeracion1]
+        },
+        {
+            id: '5',
+            categoryId: '4',
+            name: 'service5',
+            imgs: [Refrigeracion2,Refrigeracion2]
+        },
+        {
+            id: '6',
+            categoryId: '5',
+            name: 'service6',
+            imgs: [Refrigeracion3,Refrigeracion3]
+        },
+    ]
+    /* obtener el id de la categoría */
+    const handleCategoryClick = (categoryId) => {
+        // Cambiar el estado solo si se hace clic en una categoría diferente
+        setSelectedCategoryId((prevSelectedCategoryId) =>
+            prevSelectedCategoryId === categoryId ? null : categoryId
+        );
+    };
+    /* filtrar el servicio */
+    const filteredServices = services.filter(
+        (service) => service.categoryId === selectedCategoryId
+    );
     return (
         <div className={shouldHide ? 'hidden' : ''}>
             <div class="Section3">
-                <div className='cards'>
-                    <div className={`card ${cardVisible ? 'active' : ''}`} onClick={toggleCard}>
-                        <div className='content-card'>
-                            <img src={Mantenimiento} alt='Mantenimiento' className='mantenimiento'></img>
-                            <label className='title'>Mantenimiento</label>
-                            <label className='descripcion'>Descripcion de la categoría</label>
+                {categories.map((category) => {
+                    return (
+                        <div className={`card ${ selectedCategoryId === category.id ? 'selected' : ''}`} onClick={() => handleCategoryClick(category.id)}>
+                            <img src={category.img} alt={category.name} className='mantenimiento'></img>
+                            <label className='title'>{category.name}</label>
+                            <label className='descripcion'>{category.description}</label>
                         </div>
+                    )
+                })}
+                {selectedCategoryId !== null && (
+                    <div className="card-additional">
+                        {filteredServices.map((service) => (
+                        <div key={service.id} className="content-card-additional">
+                            {service.imgs.map((img, index) => (
+                            <img
+                                key={index}
+                                src={img}
+                                alt={`${service.name}-img-${index}`}
+                                className="img"
+                            />
+                            ))}
+                            <label className="title">{service.name}</label>
+                        </div>
+                        ))}
                     </div>
-                    <div className={`card ${cardVisible2 ? 'active' : ''}`} onClick={toggleCard2}>
-                        <div className='content-card'>
-                            <img src={Refrigeracion} alt='Mantenimiento' className='mantenimiento'></img>
-                            <label className='title'>Refrigeración</label>
-                            <label className='descripcion'>Descripcion de la categoría</label>
-                        </div>
-                    </div>
-                </div>
-                <div className='cards-additionals'>
-                    {cardVisible && (
-                        <div className="card-additional">
-                            <div className="content-card-additional">
-                                <img src={Mantenimiento1} alt='Mantenimiento1' className='img-prin'></img>
-                                <img src={Mantenimiento2} alt='Mantenimiento2' className='img'></img>
-                                <img src={Mantenimiento3} alt='Mantenimiento3' className='img'></img>
-                                <label className='title'>Mantenimiento 1.1</label>
-                                <label className='descripcion'>Mantenimiento 1.1</label>
-                            </div>
-                        </div>
-                    )}
-                    {cardVisible2 && (
-                        <div className="card-additional">
-                            <div className="content-card-additional">
-                                <img src={Refrigeracion1} alt='Refrigeracion1' className='img-prin'></img>
-                                <img src={Refrigeracion2} alt='Refrigeracion2' className='img'></img>
-                                <img src={Refrigeracion3} alt='Refrigeracion3' className='img'></img>
-                                <label className='title'>Refrigeracion 1.1</label>
-                                <label className='descripcion'>Refrigeracion 1.1</label>
-                            </div>
-                        </div>
-                    )}
-                </div>
+                )}
             </div>
         </div>
         
