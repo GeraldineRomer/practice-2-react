@@ -1,36 +1,52 @@
 import React from 'react';
 import './Products.scss';
 import { Cube } from '../../components/Cube/Cube';
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ServicesList } from '../../components/ServicesList/ServiceList';
+import { images } from "../../assets";
+import { MenuCube } from '../../components/Menu/MenuCube';
 
 export const Products = () => {
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+    const services = [
+        {
+            _id: "1",
+            nameService: "Servicio 1",
+            serviceDescription: "Descripción del servicio 1",
+            avatar: images.service1,
+        },
+        {
+            _id: "2",
+            nameService: "Servicio 2",
+            serviceDescription: "Descripción del servicio 2",
+            avatar: images.service2,
+        },
+        {
+            _id: "3",
+            nameService: "Servicio 3",
+            serviceDescription: "Descripción del servicio 3",
+            avatar: images.service3,
+        },
+        {
+            _id: "4",
+            nameService: "Servicio 4",
+            serviceDescription: "Descripción del servicio 4",
+            avatar: images.service4,
+        },
+        {
+            _id: "5",
+            nameService: "Servicio 5",
+            serviceDescription: "Descripción del servicio 5",
+            avatar: images.service1,
+        },
+    ];
     return (
         <div>
+            <MenuCube/>
             <Cube/>
-            <div class="Products">
-                <div className="content">
-                    <Slider {...sliderSettings}>
-                        <div>
-                            <img src="https://quenoticias.com/wp-content/uploads/2022/05/Un-verano-sin-ti-Bad-Bunny-Merengue-Despues-de-la-playa-letra-400x240.jpg"  />
-                        </div>
-                        <div>
-                            <img src="https://www.show.news/__export/1654905484890/sites/debate/img/2022/06/10/maluma-1.jpg_1694538543.jpg" />
-                        </div>
-                        <div>
-                            <img src="https://assets.elplanteo.com/wp-content/uploads/2023/05/01164009/Portadas-Javi20-500x281.png?crop=smart&height=281&width=500&optimize=medium&dpr=1&auto=webp" />
-                        </div>
-                    </Slider>
-                </div>
-            </div>
+            {/* <div class="Products">
+                <ServicesList servicesParam={services}></ServicesList>
+            </div> */}
         </div>
     )
 }

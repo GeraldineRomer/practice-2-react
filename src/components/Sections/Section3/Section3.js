@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Section3.scss';
 import { useLocation } from 'react-router-dom';
-import Mantenimiento from '../../../assets/img/descarga.jpeg';
-import Refrigeracion from '../../../assets/img/refrigeracion.jpg';
-import Mantenimiento1 from '../../../assets/img/mantenimiento1.webp';
-import Mantenimiento2 from '../../../assets/img/mantenimiento2.png';
-import Mantenimiento3 from '../../../assets/img/mantenimiento3.jpeg';
-import Refrigeracion1 from '../../../assets/img/refrigeracion1.jpg';
-import Refrigeracion2 from '../../../assets/img/refrigeracion2.jpg';
-import Refrigeracion3 from '../../../assets/img/refrigeracion3.jpg';
+import Mantenimiento from '../../../assets/img/products/descarga.jpeg';
+import Refrigeracion from '../../../assets/img/products/refrigeracion.jpg';
+import Mantenimiento1 from '../../../assets/img/products/mantenimiento1.webp';
+import Mantenimiento2 from '../../../assets/img/products/mantenimiento2.png';
+import Mantenimiento3 from '../../../assets/img/products/mantenimiento3.jpeg';
+import Refrigeracion1 from '../../../assets/img/products/refrigeracion1.jpg';
+import Refrigeracion2 from '../../../assets/img/products/refrigeracion2.jpg';
+import Refrigeracion3 from '../../../assets/img/products/refrigeracion3.jpg';
 
 export const Section3 = () => {
     const location = useLocation();
@@ -100,7 +100,8 @@ export const Section3 = () => {
     return (
         <div className={shouldHide ? 'hidden' : ''}>
             <div class="Section3">
-                {categories.map((category) => {
+                Products
+                {/* {categories.map((category) => {
                     return (
                         <div className={`card ${ selectedCategoryId === category.id ? 'selected' : ''}`} onClick={() => handleCategoryClick(category.id)}>
                             <img src={category.img} alt={category.name} className='mantenimiento'></img>
@@ -125,7 +126,7 @@ export const Section3 = () => {
                         </div>
                         ))}
                     </div>
-                )}
+                )} */}
             </div>
         </div>
         

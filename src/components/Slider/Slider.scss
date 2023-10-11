@@ -1,1 +1,39 @@
+.slider-container {
+    padding: 0px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    .images{
+        width: auto;
+        height: 400px;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        font-size: 20px;
+    }
+    .subtitle{
 
+    }
+}
+
+button.slick-arrow.slick-next::before{
+    font-size: 55px;
+    position: absolute;
+    right: 0;
+    color: rgb(72, 43, 235);
+}
+
+button.slick-arrow.slick-prev::before{
+    font-size: 55px;
+    position: absolute;
+    left: 0;
+    color: rgb(72, 43, 235);
+}
+
+.slick-dots {
+    bottom: -40px;
+    color: #fff;
+}

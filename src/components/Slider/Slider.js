@@ -1,33 +1,33 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
 import Slider from "react-slick";
-import "./Slider.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './Slider.scss';
 
-class SliderComponent extends React.Component {
-    render() {
-        var settings = {
-            dots: true
-        };
+export const SliderComponent = ({ noticias }) => {
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
+
     return (
-        <div className="container" id="container">
-            <Slider {...settings}>
-                <div>
-                <img src="http://placekitten.com/g/400/200" />
-                </div>
-                <div>
-                <img src="http://placekitten.com/g/400/200" />
-                </div>
-                <div>
-                <img src="http://placekitten.com/g/400/200" />
-                </div>
-                <div>
-                <img src="http://placekitten.com/g/400/200" />
-                </div>
+        <div className="slider-container">
+            <Slider {...sliderSettings}>
+                {noticias.map((noticia, index) => (
+                    <div key={index}>
+                        <img src={noticia.image} alt={`Imagen ${index + 1}`} className='images'/>
+                        <label className='title'>{noticia.title}</label>
+                        <label className='subtitle'>{noticia.subtitle}</label>
+                    </div>
+                ))}
             </Slider>
         </div>
-    );
-    }
+    )
 }
 
-ReactDOM.render(<SliderComponent />, document.getElementById("container"));
 export default SliderComponent;
