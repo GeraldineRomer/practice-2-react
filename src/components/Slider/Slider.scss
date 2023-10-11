@@ -3,30 +3,56 @@
     margin-top: 5px;
     justify-content: center;
     align-items: center;
-    .images{
+
+    .images {
         width: auto;
-        height: 400px;
+        height: 300px;
+        padding-top: 10px ;
     }
-    .title{
+
+    .title {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 10px;
         font-size: 20px;
     }
-    .subtitle{
 
+    .subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .conf-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .button-more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-size: 20px;
+            background-color: rgb(72, 43, 235);
+            color: #fff;
+            border-radius: 2px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
     }
 }
 
-button.slick-arrow.slick-next::before{
+button.slick-arrow.slick-next::before {
     font-size: 55px;
     position: absolute;
     right: 0;
     color: rgb(72, 43, 235);
 }
 
-button.slick-arrow.slick-prev::before{
+button.slick-arrow.slick-prev::before {
     font-size: 55px;
     position: absolute;
     left: 0;

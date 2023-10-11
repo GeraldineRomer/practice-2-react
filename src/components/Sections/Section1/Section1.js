@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Section1.scss';
 import { useLocation } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
@@ -6,9 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { images_notice } from '../../../assets';
 import SliderComponent from '../../Slider/Slider';
 
+
 export const Section1 = () => {
     const location = useLocation();
     const shouldHide = location.pathname === '/flexbox';
+    
     /* const images = Array.isArray(images_notice) ? images_notice : []; */
     const noticias = [
         {
