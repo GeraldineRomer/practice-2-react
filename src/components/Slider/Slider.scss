@@ -16,6 +16,7 @@
         justify-content: center;
         margin: 10px;
         font-size: 20px;
+        font-weight: bold;
     }
 
     .subtitle {
@@ -35,12 +36,14 @@
             align-items: center;
             justify-content: center;
             margin: 10px;
-            font-size: 20px;
+            font-size: 15px;
             background-color: rgb(72, 43, 235);
-            color: #fff;
+            color: #c4dbfd;
             border-radius: 2px;
             padding: 10px 20px;
             cursor: pointer;
+            border-color: rgb(72, 43, 235);
+            border-radius: 10px;
         }
     }
 }
@@ -62,4 +65,17 @@ button.slick-arrow.slick-prev::before {
 .slick-dots {
     bottom: -40px;
     color: #fff;
+}
+
+.button-fav-group{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-end;
+    .btn-icon{
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+        color: rgb(139,134,243);
+    }
 }

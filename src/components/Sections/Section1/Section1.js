@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { images_notice } from '../../../assets';
 import SliderComponent from '../../Slider/Slider';
 
-
 export const Section1 = () => {
     const location = useLocation();
     const shouldHide = location.pathname === '/flexbox';

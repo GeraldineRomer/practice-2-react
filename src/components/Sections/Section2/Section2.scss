@@ -4,4 +4,36 @@
     background-color: rgb(77, 174, 238);
     margin: 40px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .card-favorites{
+        width: 500px;
+        height: 400px;
+        background-color: blueviolet;
+        margin: 30px;
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        .icon-star{
+            margin: 20px;
+        }
+    }
+    .card-add{
+        width: 500px;
+        height: 400px;
+        background-color: blueviolet;
+        margin: 30px;
+        border-radius: 10px;
+        margin-top: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        .icon-add{
+            margin: 20px;
+        }
+    }
 }
