@@ -17,7 +17,7 @@ export const Home = () => {
             <MenuCube />
             {/* <TraslucentMenu/> */}
             <Section1/>
-            <Section2 favorites={favorites} />
+            <Section2 />
             <Section3/>
             <LateralMenu/>
         </div>

@@ -1,35 +1,35 @@
-    import React, { useState } from 'react';
-    import Slider from 'react-slick';
-    import 'slick-carousel/slick/slick.css';
-    import 'slick-carousel/slick/slick-theme.css';
-    import './Slider.scss';
-    import Modal from '@mui/material/Modal';
-    import Box from '@mui/material/Box';
-    import Typography from '@mui/material/Typography';
-    import { Fab } from '@mui/material';
-    import { Add, Star } from '@mui/icons-material';
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './Slider.scss';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Fab } from '@mui/material';
+import { Add, Star } from '@mui/icons-material';
+import { useFavorites } from '../FavoriteList/FavoriteList';
 
-    // Definir el objeto de estilo 'style' aquí
-    const style = {
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,   
-        justifyContent: 'center',
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        borderRadius: '10px',
-        backgroundColor: 'rgb(190, 183, 230)',
-        borderColor: 'rgb(131, 112, 233)'
-    };
+const style = {
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,   
+    justifyContent: 'center',
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '10px',
+    backgroundColor: 'rgb(190, 183, 230)',
+    borderColor: 'rgb(131, 112, 233)',
+};
 
-    const SliderComponent = ({ noticias }) => {
+const SliderComponent = ({ noticias }) => {
     const sliderSettings = {
         dots: true,
         infinite: true,
@@ -42,7 +42,6 @@
 
     const [openModal, setOpenModal] = useState(false);
     const [selectedNotice, setSelectedNotice] = useState(null);
-    const [favorites, setFavorites] = useState([]);
 
     const handleOpen = (noticia) => {
         setSelectedNotice(noticia);
@@ -54,12 +53,12 @@
         setOpenModal(false);
     };
 
+    const { addFavorite } = useFavorites();
+
     const handleAddToFavorite = (noticeID) => {
         if (noticeID) {
-            setFavorites([...favorites, noticeID]);
+            addFavorite(noticeID); // Agregar el ID a la lista de favoritos a través del contexto
         }
-        console.log(noticeID);
-        console.log(favorites);
     };
 
     return (
@@ -115,6 +114,6 @@
         </Modal>
         </div>
     );
-    };
+};
 
-    export default SliderComponent;
+export default SliderComponent;
