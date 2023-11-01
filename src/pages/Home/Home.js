@@ -8,6 +8,7 @@ import { Section3 } from '../../components/Sections/Section3/Section3';
 import { LateralMenu } from '../../components/LateralMenu/LateralMenu';
 import { TraslucentMenu } from '../../components/TraslucentMenu/TraslucentMenu';
 import  SliderComponent  from '../../components/Slider/Slider';
+import {Footer} from '../../components/Footer/Footer'
 
 export const Home = () => {
     const [favorites, setFavorites] = useState([]);
@@ -20,6 +21,7 @@ export const Home = () => {
             <Section2 />
             <Section3/>
             <LateralMenu/>
+            <Footer/>
         </div>
     )
 }
